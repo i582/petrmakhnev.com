@@ -88,7 +88,8 @@
         li { margin-bottom: 6px; }
         li::marker { color: #888; }
         .contact-info { margin-bottom: 35px; color: #555; }
-        .contact-links { display: flex; gap: 15px; align-items: center; margin-top: 5px; }
+        .contact-links { display: flex; flex-wrap: wrap; gap: 5px 15px; align-items: center; margin-top: 5px; }
+        #location, #work-experience { white-space: nowrap; }
         a { 
             color: #111; 
             text-decoration: none;
@@ -249,6 +250,7 @@
                 <a href="https://www.linkedin.com/in/petrmakhnev" target="_blank" rel="noopener noreferrer me" title="Visit Petr Makhnev's LinkedIn profile">LinkedIn</a>
                 <a href="https://github.com/i582" target="_blank" rel="noopener noreferrer me" title="Visit Petr Makhnev's GitHub profile">GitHub</a>
                 <span id="location" style="cursor: pointer;" title="Show coordinates">Yerevan, Armenia</span>
+                <span id="work-experience" title="Career started in July 2020">Experience since July 2020</span>
             </div>
         </div>
     </header>
@@ -496,6 +498,31 @@
             if (document.body.classList.contains('terminal-mode')) {
                 initMatrix();
             }
+        });
+
+        function formatWorkExperience(now = new Date()) {
+            const startYear = 2020;
+            const startMonth = 7;
+            const totalMonths = Math.max(0, (now.getFullYear() - startYear) * 12 + now.getMonth() + 1 - startMonth);
+            const years = Math.floor(totalMonths / 12);
+            const months = totalMonths % 12;
+            const parts = [];
+
+            if (years > 0) parts.push(`${years} ${years === 1 ? 'yr' : 'yrs'}`);
+            if (months > 0) parts.push(`${months} ${months === 1 ? 'mo' : 'mos'}`);
+
+            return `${parts.join(' ') || '0 mos'} of experience`;
+        }
+
+        function updateWorkExperience() {
+            document.getElementById('work-experience').textContent = formatWorkExperience();
+        }
+
+        updateWorkExperience();
+        setInterval(updateWorkExperience, 60 * 60 * 1000);
+        window.addEventListener('pageshow', updateWorkExperience);
+        document.addEventListener('visibilitychange', () => {
+            if (!document.hidden) updateWorkExperience();
         });
 
         const loc = document.getElementById('location');

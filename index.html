@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petr Makhnev — Compiler Engineer</title>
+    <meta name="description" content="Resume of Petr Makhnev, Compiler Engineer at TON Core. Specialized in compilers, static analysis, and blockchain development (Tolk, Tact, Rust). Ex JetBrains, ex VK.">
+    <meta name="keywords" content="Petr Makhnev, Compiler Engineer, TON, Rust, Tolk, Tact, JetBrains, VK, KPHP, Static Analysis, TVM, Blockchain, Compilers">
+    <meta name="author" content="Petr Makhnev">
+    <meta name="robots" content="index, follow">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
+    <link rel="canonical" href="https://petrmakhnev.com/">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Petr Makhnev",
+      "jobTitle": "Compiler Engineer",
+      "url": "https://petrmakhnev.com/",
+      "sameAs": [
+        "https://github.com/i582",
+        "https://www.linkedin.com/in/petrmakhnev"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "TON Foundation"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Baltic State Technical University VOENMEH"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Yerevan",
+        "addressCountry": "AM"
+      },
+      "knowsAbout": ["Rust", "Compilers", "Static Analysis", "TON Blockchain", "TVM", "Tolk", "Tact", "C++"],
+      "description": "Compiler Engineer specialized in programming languages, static analysis, and blockchain development."
+    }
+    </script>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://petrmakhnev.com/">
+    <meta property="og:title" content="Petr Makhnev — Compiler Engineer">
+    <meta property="og:description" content="Compiler Engineer at TON Core. Ex JetBrains, ex VK. 
+    Specialized in compilers, static analysis, and blockchain development.">
+    <meta property="og:site_name" content="Petr Makhnev Resume">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:url" content="https://petrmakhnev.com/">
+    <meta property="twitter:title" content="Petr Makhnev — Compiler Engineer">
+    <meta property="twitter:description" content="Compiler Engineer at TON Core. Ex JetBrains, ex VK. 
+    Specialized in compilers, static analysis, and blockchain development.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'EB Garamond', serif;
+            line-height: 1.2;
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            color: #111;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-feature-settings: "liga" 1, "onum" 1, "kern" 1;
+        }
+        
+        h1 { margin-bottom: 5px; font-size: 2.8rem; letter-spacing: -0.5px; }
+        h2 { 
+            border-bottom: 0.5px solid rgba(0,0,0,0.3); 
+            padding-bottom: 3px; 
+            margin-top: 40px; 
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #444;
+        }
+        h3 { margin-bottom: 2px; font-size: 1.5rem; font-weight: 600; }
+        ul { margin-top: 8px; padding-left: 18px; }
+        li { margin-bottom: 6px; }
+        li::marker { color: #888; }
+        .contact-info { margin-bottom: 35px; color: #555; }
+        .contact-links { display: flex; gap: 15px; align-items: center; margin-top: 5px; }
+        a { 
+            color: #111; 
+            text-decoration: none;
+            background-image: linear-gradient(to top, #111 100%, transparent 0);
+            background-size: 100% 1px;
+            background-repeat: no-repeat;
+            background-position: bottom;
+            transition: background-size 0.3s ease-in-out, color 0.3s ease-in-out;
+            border-radius: 2px; 
+            padding: 0 2px; 
+            margin: 0 -2px; 
+        }
+        a:hover { 
+            background-size: 100% 100%;
+            color: #fff; 
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+        h3 + .job-header { margin-top: 0; }
+        
+        .job-header + p {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        .job-date {
+            font-variant-numeric: oldstyle-nums;
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        article { page-break-inside: avoid; break-inside: avoid; }
+
+        .print-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 6px 12px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 0.5px solid #ccc;
+            border-radius: 2px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.2s;
+            z-index: 100;
+        }
+        .print-btn:hover { background: #000; color: #fff; border-color: #000; }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: #1a1a1a;
+                color: #ddd;
+            }
+            h1 { color: #fff; }
+            h2 { border-bottom-color: rgba(255,255,255,0.2); color: #aaa; }
+            h3 { color: #eee; }
+            a { 
+                color: #eee; 
+                background-image: linear-gradient(to top, #eee 100%, transparent 0);
+            }
+            a:hover { 
+                color: #1a1a1a; 
+            }
+            .job-date { color: #999; }
+            .contact-info { color: #bbb; }
+            .print-btn { background: rgba(40, 40, 40, 0.9); border-color: #444; color: #ccc; }
+            .print-btn:hover { background: #eee; color: #000; }
+        }
+
+        @media print {
+            .no-print { display: none !important; }
+            body {
+                background: white !important;
+                color: black !important;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                font-size: 11pt;
+            }
+            h1 { font-size: 22pt; }
+            h2 { font-size: 14pt; border-bottom: 0.5pt solid #000; }
+            h3 { font-size: 13pt; }
+            .job-date { color: #444 !important; }
+        }
+
+        @media (max-width: 600px) {
+            body { margin: 10px auto; padding: 15px; }
+            .job-header { flex-direction: column; }
+            .job-date { margin-top: 2px; }
+        }
+
+        body { transition: background 0.3s, color 0.3s; }
+        
+        body.terminal-mode {
+            background: #0d0d0d !important;
+            color: #00ff41 !important;
+            font-family: 'Courier New', Courier, monospace !important;
+        }
+        body.terminal-mode a { 
+            color: #00ff41 !important; 
+            text-decoration: none !important;
+            background-image: linear-gradient(to top, #00ff41 100%, transparent 0);
+            background-size: 100% 1px;
+            background-repeat: no-repeat;
+            background-position: bottom;
+            transition: background-size 0.3s ease-in-out, color 0.3s ease-in-out;
+            padding: 0 2px; 
+            margin: 0 -2px; 
+        }
+        body.terminal-mode a:hover { 
+            background-size: 100% 100% !important;
+            color: #0d0d0d !important; 
+            text-decoration: none !important;
+        }
+        body.terminal-mode h1, body.terminal-mode h2, body.terminal-mode h3 { color: #00ff41 !important; }
+        body.terminal-mode h2 { border-bottom-color: #00ff41 !important; }
+        body.terminal-mode .job-date, body.terminal-mode .contact-info { color: #00ff41 !important; opacity: 0.8; }
+        body.terminal-mode .print-btn { display: none; }
+        body.terminal-mode li::marker { color: #00ff41; }
+        body.terminal-mode hr { border: none; border-top: 1px solid #00ff41; opacity: 0.3; }
+
+        #matrix-canvas {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.15;
+            pointer-events: none;
+        }
+
+        body.terminal-mode #matrix-canvas {
+            display: block;
+        }
+    </style>
+</head>
+<body itemscope itemtype="https://schema.org/Person">
+    <canvas id="matrix-canvas"></canvas>
+    <button type="button" class="print-btn no-print" onclick="window.print()">Print to PDF</button>
+
+    <header>
+        <h1><span itemprop="name">Petr Makhnev</span> <span id="secret-trigger" class="no-print" style="cursor: pointer; font-size: 1.5rem; vertical-align: middle;" title="Toggle Terminal Mode" role="button" aria-label="Toggle Matrix Terminal Mode" tabindex="0" aria-pressed="false">👨‍💻</span></h1>
+        <div class="contact-info">
+            <b itemprop="jobTitle">Compiler Engineer | TON Core | ex JetBrains, ex VK</b>
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/petrmakhnev" target="_blank" rel="noopener noreferrer me" title="Visit Petr Makhnev's LinkedIn profile">LinkedIn</a>
+                <a href="https://github.com/i582" target="_blank" rel="noopener noreferrer me" title="Visit Petr Makhnev's GitHub profile">GitHub</a>
+                <span id="location" style="cursor: pointer;" title="Show coordinates">Yerevan, Armenia</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About</h2>
+            <p itemprop="description">Working in the TON Core team on the programming language Tolk and development tooling for the TON blockchain.</p>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+
+            <article>
+                <h3>TON Foundation</h3>
+                <div class="job-header">
+                    <b>Compiler Engineer</b>
+                    <span class="job-date">Jul 2025 – Present · 6 mos</span>
+                </div>
+                <p><i>TON Core | Yerevan, Armenia · Remote</i></p>
+                <ul>
+                    <li>Created TON extension for VS Code and language server with support for Tolk, FunC, Fift assembly and TL-B languages (<a href="https://github.com/ton-blockchain/ton-language-server" target="_blank" rel="noopener noreferrer">ton-language-server</a>)</li>
+                    <li>Created Tolk formatter (<a href="https://github.com/ton-blockchain/tolkfmt" target="_blank" rel="noopener noreferrer">tolkfmt</a>)</li>
+                    <li>Added proof-of-concept Fift assembly compiler on top of the TASM for new Tolk backend</li>
+                    <li>Added coverage and profiling for tests</li>
+                    <li>Lead IntelliJ TON 3.0 release with more than 170 tasks (<a href="https://github.com/ton-blockchain/intellij-ton" target="_blank" rel="noopener noreferrer">intellij-ton</a>)</li>
+                    <li>Created Sandbox UI (<a href="https://txtracer.ton.org/sandbox/" target="_blank" rel="noopener noreferrer">sandbox</a>)</li>
+                    <li>Created TVM Instructions catalog (<a href="https://txtracer.ton.org/spec/" target="_blank" rel="noopener noreferrer">spec</a>)</li>
+                </ul>
+            </article>
+
+            <article>
+                <div class="job-header">
+                    <b>Middle Compiler Engineer</b>
+                    <span class="job-date">Jan 2025 – Jul 2025 · 6 mos</span>
+                </div>
+                <p><i>TON Studio | Yerevan, Armenia · Remote</i></p>
+                <p>Worked in the TON Studio division on the programming language Tact for the TON blockchain. Support and development of Tact programming language compiler and tooling:</p>
+                <ul>
+                    <li>Created language server and VS Code extension (<a href="https://github.com/tact-lang/tact-language-server" target="_blank" rel="noopener noreferrer">tact-language-server</a>)</li>
+                    <li>Created Fift assembly, BoC, TL-B language servers inside Tact language server</li>
+                    <li>Created plugin for JetBrains IDEs (<a href="https://github.com/tact-lang/intelli-tact" target="_blank" rel="noopener noreferrer">intelli-tact</a>)</li>
+                    <li>Created CST parser generator and formatter for Tact</li>
+                    <li>200+ commits in the compiler repository (<a href="https://github.com/tact-lang/tact" target="_blank" rel="noopener noreferrer">tact</a>)</li>
+                    <li>Fixed 100+ bugs and added 40+ new features</li>
+                </ul>
+                <p>TON-related:</p>
+                <ul>
+                    <li>Created a new version of the TVM disassembler (<a href="https://github.com/tact-lang/ton-opcode" target="_blank" rel="noopener noreferrer">ton-opcode</a>)</li>
+                    <li>Wrote a complete assembler for TVM bitcode (900+ instructions, Text assembly -> Bitcode and vice versa) (<a href="https://github.com/tact-lang/tasm" target="_blank" rel="noopener noreferrer">tasm</a>)</li>
+                    <li>Created TxTracer tool to debug and emulate any transaction in TON (<a href="https://txtracer.ton.org/?tx=f64c6a3cdf3fad1d786aacf9a6130f18f3f76eeb71294f53bbd812ad3703e70a" target="_blank" rel="noopener noreferrer">TxTracer</a>)</li>
+                    <li>Created TVM Assembly Playground (<a href="https://txtracer.ton.org/play" target="_blank" rel="noopener noreferrer">playground</a>) and Godbolt-like explorer for FunC code (<a href="https://txtracer.ton.org/code-explorer" target="_blank" rel="noopener noreferrer">code-explorer</a>)</li>
+                    <li>Wrote several articles about TVM internals in TON documentation</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Spawn Programming Language</h3>
+                <div class="job-header">
+                    <b>Core Developer</b>
+                    <span class="job-date">Jul 2023 – Oct 2024 · 1 yr 4 mos</span>
+                </div>
+                <p><i>Yerevan, Armenia · Remote</i></p>
+                <ul>
+                    <li>Developed a compiler (transpiler to C) and an interpreter from scratch, implementing 250 inspections</li>
+                    <li>Developed plugins for VS Code and JetBrains IDE</li>
+                    <li>Developed Language Servers and Tree-Sitter grammar for it</li>
+                    <li>Authored a complete language specification</li>
+                    <li>Wrote nearly 70,000 lines of code in the standard library in Spawn</li>
+                    <li>Developed tools such as spawnfmt, spawnprof, and spawncov in Spawn</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>JetBrains</h3>
+                <div class="job-header">
+                    <b>Software Developer</b>
+                    <span class="job-date">Oct 2022 – Mar 2024 · 1 yr 6 mos</span>
+                </div>
+                <p><i>Yerevan, Armenia · Remote</i></p>
+                <p>Support and development of PhpStorm IDE:</p>
+                <ul>
+                    <li>Improved type inference system for better generics support</li>
+                    <li>Implemented various bug fixes and improvements in type inference</li>
+                    <li>Added a bunch of new inspections and quick fixes</li>
+                    <li>Improved documentation support</li>
+                    <li>Added better support for Psalm types</li>
+                    <li>Improved Laravel Blade support</li>
+                    <li>Improved testing support</li>
+                    <li>Closed about 100 tasks</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>V Kontakte LLC (VK.com)</h3>
+                <div class="job-header">
+                    <b>Compiler Engineer</b>
+                    <span class="job-date">Jan 2022 – Sep 2022 · 9 mos</span>
+                </div>
+                <p><i>Saint Petersburg, Russia</i></p>
+                <p>Support and implementation of new features in the AdmStorm plugin. Created internal AdmStorm plugin for PhpStorm for our developers (<a href="https://github.com/VKCOM/admstorm" target="_blank" rel="noopener noreferrer">admstorm</a>):</p>
+                <ul>
+                    <li>Checking the synchronization of the local repository and the repository on the development server</li>
+                    <li>Additional actions for push and pull, taking into account hooks on the development server</li>
+                    <li>Various configurations for launching KPHP, PHPUnit and PHPLinter</li>
+                    <li>Built-in KPHP Playground and Hastebin</li>
+                    <li>Ability to view the generated C++ code for the entire site</li>
+                </ul>
+            </article>
+
+            <article>
+                <div class="job-header">
+                    <b>Junior Compiler Engineer</b>
+                    <span class="job-date">Sep 2020 – Dec 2021 · 1 yr 4 mos</span>
+                </div>
+                <p>Development of the KPHP compiler from PHP to C++:</p>
+                <ul>
+                    <li>Participated in the development of a new functions color concept for architecture validation</li>
+                    <li>Developed a separate <a href="https://github.com/vkcom/nocolor" target="_blank" rel="noopener noreferrer">NoColor</a> color concept tool for community use outside of KPHP</li>
+                    <li>Implemented the concept of color in KPHP and added support for various PHP functions</li>
+                    <li>Implementing PHP 7.4 and PHP 8 features</li>
+                </ul>
+                <p>Development and support of the <a href="https://github.com/VKCOM/noverify" target="_blank" rel="noopener noreferrer">NoVerify</a> static analyzer for PHP:</p>
+                <ul>
+                    <li>Added over 50 new checks to NoVerify and internal linter</li>
+                    <li>Added support for Composer and improved testing systems</li>
+                    <li>Rewritten the entire CLI to be more user-friendly</li>
+                    <li>Implemented full PHP 8 and PHP 8.1 support into the parser</li>
+                    <li>Created NoVerify Playground and improved type inference system</li>
+                    <li>Wrote new documentation and many small improvements</li>
+                </ul>
+                <p>Building a PhpStats connection analyzer for PHP from scratch:</p>
+                <ul>
+                    <li>Collect 9 different code metrics and build 8 different dependency graphs</li>
+                    <li>Collect dependencies between classes and functions and check reachability</li>
+                    <li>Collect general statistics on the project and view info in sortable tables</li>
+                </ul>
+            </article>
+
+            <article>
+                <div class="job-header">
+                    <b>Trainee Software Engineer</b>
+                    <span class="job-date">Jul 2020 – Aug 2020 · 2 mos</span>
+                </div>
+                <p><i>Internship</i></p>
+                <ul>
+                    <li>Development of static analyzer <a href="https://github.com/VKCOM/noverify" target="_blank" rel="noopener noreferrer">NoVerify</a> for PHP and internal VK linter</li>
+                    <li>Adding new checks and code refactoring</li>
+                    <li>Writing unit tests</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="job-header" itemprop="alumniOf" itemscope itemtype="https://schema.org/CollegeOrUniversity">
+                <b itemprop="name">Baltic State Technical University "VOENMEH" named after D.F. Ustinov</b>
+                <span class="job-date">2018–2022</span>
+            </div>
+            <p>Bachelor's Degree, Information Technology</p>
+        </section>
+    </main>
+
+    <footer>
+        <br>
+        <hr>
+        <div class="last-updated no-print">
+            Last updated: December 2025
+        </div>
+    </footer>
+    <script>
+        const trigger = document.getElementById('secret-trigger');
+        const canvas = document.getElementById('matrix-canvas');
+        const ctx = canvas.getContext('2d');
+
+        let animationId = null;
+        const characters = "01ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$+-*/=%&_<>[]{}()";
+        const fontSize = 20;
+        let columns = 0;
+        let drops = [];
+        let lastTime = 0;
+        const fps = 20;
+
+        function initMatrix() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            columns = Math.floor(canvas.width / fontSize);
+            drops = Array(columns).fill(1);
+        }
+
+        function drawMatrix(timestamp) {
+            if (!timestamp) timestamp = 0;
+            const elapsed = timestamp - lastTime;
+
+            if (elapsed > (1000 / fps)) {
+                lastTime = timestamp;
+
+                ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = "#00ff41";
+                ctx.font = fontSize + "px monospace";
+
+                for (let i = 0; i < drops.length; i++) {
+                    const text = characters.charAt(Math.floor(Math.random() * characters.length));
+                    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                    if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                        drops[i] = 0;
+                    }
+                    drops[i]++;
+                }
+            }
+            animationId = requestAnimationFrame(drawMatrix);
+        }
+
+        function toggleTerminalMode() {
+            const isActive = document.body.classList.toggle('terminal-mode');
+            trigger.setAttribute('aria-pressed', isActive);
+            if (isActive) {
+                initMatrix();
+                drawMatrix();
+            } else {
+                cancelAnimationFrame(animationId);
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+            }
+        }
+
+        trigger.addEventListener('click', toggleTerminalMode);
+        trigger.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleTerminalMode();
+            }
+        });
+
+        window.addEventListener('resize', () => {
+            if (document.body.classList.contains('terminal-mode')) {
+                initMatrix();
+            }
+        });
+
+        const loc = document.getElementById('location');
+        loc.addEventListener('click', () => {
+            if (loc.innerText === "Yerevan, Armenia") {
+                loc.innerText = "40.1772° N, 44.5035° E";
+                setTimeout(() => { loc.innerText = "Yerevan, Armenia"; }, 3000);
+            }
+        });
+    </script>
+</body>
+</html>

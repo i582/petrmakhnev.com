@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Petr Makhnev — Compiler Engineer</title>
-    <meta name="description" content="Compiler Engineer at TON Core. Creator of Acton, Acton Studio and actonscan. Building Tolk, compilers and developer tools. Ex JetBrains, ex VK.">
-    <meta name="keywords" content="Petr Makhnev, Compiler Engineer, TON, Acton, Acton Studio, actonscan, Rust, Tolk, Tact, JetBrains, VK, KPHP, Static Analysis, TVM, Blockchain, Compilers">
+    <title>Petr Makhnev — Software Engineer</title>
+    <meta name="description" content="Software Engineer at TON Core. Creator of Acton, Acton Studio and actonscan. Building compilers, programming languages and developer tools. Ex JetBrains, ex VK.">
+    <meta name="keywords" content="Petr Makhnev, Software Engineer, TON, Acton, Acton Studio, actonscan, Rust, Tolk, Tact, JetBrains, VK, KPHP, Static Analysis, TVM, Blockchain, Compilers">
     <meta name="author" content="Petr Makhnev">
     <meta name="robots" content="index, follow">
 
@@ -17,7 +17,7 @@
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Petr Makhnev",
-      "jobTitle": "Compiler Engineer",
+      "jobTitle": "Software Engineer",
       "url": "https://petrmakhnev.com/",
       "sameAs": [
         "https://github.com/i582",
@@ -37,22 +37,22 @@
         "addressCountry": "AM"
       },
       "knowsAbout": ["Rust", "Compilers", "Static Analysis", "TON Blockchain", "TVM", "Tolk", "Tact", "C++"],
-      "description": "Compiler Engineer at TON Core. Creator of Acton, Acton Studio and actonscan. Building Tolk, compilers and developer tools."
+      "description": "Software Engineer at TON Core. Creator of Acton, Acton Studio and actonscan. Building compilers, programming languages and developer tools."
     }
     </script>
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://petrmakhnev.com/">
-    <meta property="og:title" content="Petr Makhnev — Compiler Engineer">
-    <meta property="og:description" content="Compiler Engineer at TON Core. Creator of Acton, Acton Studio and actonscan. Ex JetBrains, ex VK.">
+    <meta property="og:title" content="Petr Makhnev — Software Engineer">
+    <meta property="og:description" content="Software Engineer at TON Core. Creator of Acton, Acton Studio and actonscan. Ex JetBrains, ex VK.">
     <meta property="og:site_name" content="Petr Makhnev Resume">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary">
     <meta property="twitter:url" content="https://petrmakhnev.com/">
-    <meta property="twitter:title" content="Petr Makhnev — Compiler Engineer">
-    <meta property="twitter:description" content="Compiler Engineer at TON Core. Creator of Acton, Acton Studio and actonscan. Ex JetBrains, ex VK.">
+    <meta property="twitter:title" content="Petr Makhnev — Software Engineer">
+    <meta property="twitter:description" content="Software Engineer at TON Core. Creator of Acton, Acton Studio and actonscan. Ex JetBrains, ex VK.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -106,6 +106,39 @@
             background-size: 100% 100%;
             color: #fff; 
         }
+
+        .availability-banner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px 24px;
+            margin-bottom: 28px;
+            padding: 18px 22px;
+            border: 1px solid #cedbc8;
+            border-radius: 2px;
+            background: #f2f6ef;
+            color: #27452b;
+        }
+        .availability-banner p { flex: 1 1 360px; margin: 0; font-size: 1.05rem; line-height: 1.4; }
+        .availability-banner strong { display: block; margin-bottom: 3px; font-size: 1.2rem; font-weight: 600; }
+        .availability-banner a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            min-height: 44px;
+            box-sizing: border-box;
+            padding: 8px 12px;
+            margin: 0;
+            border: 1px solid currentColor;
+            background-image: none;
+            color: inherit;
+            font-size: 1rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .availability-banner a:hover { background: #27452b; border-color: #27452b; color: #fff; }
+        .availability-banner a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
 
         .job-header {
             display: flex;
@@ -167,6 +200,8 @@
             .contact-info { color: #bbb; }
             .print-btn { background: rgba(40, 40, 40, 0.9); border-color: #444; color: #ccc; }
             .print-btn:hover { background: #eee; color: #000; }
+            .availability-banner { background: #1e2c20; border-color: #3a513a; color: #d6e9cd; }
+            .availability-banner a:hover { background: #d6e9cd; border-color: #d6e9cd; color: #1e2c20; }
         }
 
         @media print {
@@ -187,6 +222,8 @@
 
         @media (max-width: 600px) {
             body { margin: 10px auto; padding: 15px; }
+            .availability-banner { flex-direction: column; align-items: flex-start; margin-top: 44px; padding: 16px; }
+            .availability-banner p { flex: initial; }
             .job-header { flex-direction: column; }
             .job-date { margin-top: 2px; }
         }
@@ -218,6 +255,9 @@
         body.terminal-mode h2 { border-bottom-color: #00ff41 !important; }
         body.terminal-mode .job-date, body.terminal-mode .contact-info { color: #00ff41 !important; opacity: 0.8; }
         body.terminal-mode .print-btn { display: none; }
+        body.terminal-mode .availability-banner { background: #0d0d0d; border-color: #00ff41; color: #00ff41; }
+        body.terminal-mode .availability-banner a { padding: 8px 12px; margin: 0; background-image: none; }
+        body.terminal-mode .availability-banner a:hover { background: #00ff41; border-color: #00ff41; }
         body.terminal-mode li::marker { color: #00ff41; }
         body.terminal-mode hr { border: none; border-top: 1px solid #00ff41; opacity: 0.3; }
 
@@ -242,10 +282,15 @@
     <canvas id="matrix-canvas"></canvas>
     <button type="button" class="print-btn no-print" onclick="window.print()">Print to PDF</button>
 
+    <aside class="availability-banner no-print" aria-label="Job availability">
+        <p><strong>Open to work</strong>I’m looking for a new Software Engineer role. I bring experience building developer tools, compilers, IDE integrations, blockchain infrastructure, and cross-platform libraries — from initial design to working products.</p>
+        <a href="https://www.linkedin.com/in/petrmakhnev" target="_blank" rel="noopener noreferrer">Let’s talk on LinkedIn <span aria-hidden="true">↗</span></a>
+    </aside>
+
     <header>
         <h1><span itemprop="name">Petr Makhnev</span> <span id="secret-trigger" class="no-print" style="cursor: pointer; font-size: 1.5rem; vertical-align: middle;" title="Toggle Terminal Mode" role="button" aria-label="Toggle Matrix Terminal Mode" tabindex="0" aria-pressed="false">👨‍💻</span></h1>
         <div class="contact-info">
-            <b itemprop="jobTitle">Compiler Engineer | TON Core | ex JetBrains, ex VK</b>
+            <b itemprop="jobTitle">Software Engineer | TON Core | ex JetBrains, ex VK</b>
             <div class="contact-links">
                 <a href="https://www.linkedin.com/in/petrmakhnev" target="_blank" rel="noopener noreferrer me" title="Visit Petr Makhnev's LinkedIn profile">LinkedIn</a>
                 <a href="https://github.com/i582" target="_blank" rel="noopener noreferrer me" title="Visit Petr Makhnev's GitHub profile">GitHub</a>
@@ -258,7 +303,7 @@
     <main>
         <section id="about">
             <h2>About</h2>
-            <p itemprop="description">Working in the TON Core team on the programming language Tolk and development tooling for the TON blockchain.</p>
+            <p itemprop="description">Software engineer building <strong>developer tools and infrastructure</strong>, with a background in compilers, static analysis, and IDE development. My work spans language implementations, cross-platform libraries, and complete development environments. Currently building the TON developer ecosystem at <strong>TON Core</strong>; previously worked on PhpStorm at <strong>JetBrains</strong> and compiler tooling at <strong>VK</strong>.</p>
         </section>
 
         <section id="experience">
@@ -267,26 +312,26 @@
             <article>
                 <h3>TON</h3>
                 <div class="job-header">
-                    <b>Compiler Engineer</b>
+                    <b>Software Engineer</b>
                     <span class="job-date" id="current-job-date">Jul 2025 – Present</span>
                 </div>
                 <p><i>TON Core | Yerevan, Armenia · Remote</i></p>
-                <p>Working in the TON Core team on the programming language Tolk and development tooling for the TON blockchain.</p>
+                <p>When I joined TON Core, smart contract development relied on a fragmented set of tools. I <strong>led the effort to rebuild and unify</strong> the developer ecosystem around <strong>Acton</strong>, covering language tooling, IDE integrations, testing, debugging, deployment, and local infrastructure.</p>
                 <ul>
                     <li>Created <a href="https://ton-blockchain.github.io/acton/" target="_blank" rel="noopener noreferrer">Acton</a> — the primary toolchain for developing smart contracts on TON</li>
-                    <li>Created <a href="https://ton-blockchain.github.io/acton/docs/studio" target="_blank" rel="noopener noreferrer">Acton Studio</a> — a local web workspace for running tests, inspecting smart contracts, and managing TON development environments</li>
-                    <li>Created <a href="https://github.com/ton-blockchain/acton/tree/master/crates/ton-localnet" target="_blank" rel="noopener noreferrer">Localton</a> — a runtime for running real TON networks locally with validators, a liteserver, TON Center v2/v3 APIs, and indexers</li>
+                    <li>Created <a href="https://github.com/ton-blockchain/acton/tree/master/apps/localton" target="_blank" rel="noopener noreferrer">Localton</a> — a runtime for running real TON networks locally with validators, a liteserver, TON Center v2/v3 APIs, and indexers</li>
                     <li>Created <a href="https://github.com/i582/wallet-engine" target="_blank" rel="noopener noreferrer">Wallet Engine</a> — a cross-platform Rust engine for TON wallet applications, with support for Swift, Kotlin, and TypeScript/WebAssembly</li>
+                    <li>Created <a href="https://ton-blockchain.github.io/acton/docs/studio" target="_blank" rel="noopener noreferrer">Acton Studio</a> — a local web workspace for running tests, inspecting smart contracts, and managing TON development environments</li>
                     <li>Created <a href="https://actonscan.com/" target="_blank" rel="noopener noreferrer">actonscan</a> — a TON explorer for developers with source code debugging, message deserialization, emulation, a testnet faucet, and developer tools</li>
-                    <li>Created a <a href="https://actonscan.com/faucet" target="_blank" rel="noopener noreferrer">testnet faucet</a> for getting testnet GRAM for testing</li>
-                    <li>Created a <a href="https://github.com/ton-blockchain/acton/tree/master/crates" target="_blank" rel="noopener noreferrer">complete Tolk analysis pipeline</a> for the Tolk language</li>
+                    <li>Created a <a href="https://actonscan.com/faucet" target="_blank" rel="noopener noreferrer">testnet faucet</a> with proof-of-work challenges, abuse prevention, and persistent payout jobs</li>
                     <li>Created <a href="https://github.com/ton-blockchain/acton/tree/master/packages/vscode-ton" target="_blank" rel="noopener noreferrer">TON extension for VS Code</a> and <a href="https://github.com/ton-blockchain/acton/tree/master/crates/ton-language-server-core" target="_blank" rel="noopener noreferrer">language server</a> with support for Tolk, FunC, Fift assembly, TL-B, and the Acton toolchain</li>
-                    <li>Created <a href="https://github.com/ton-blockchain/acton/tree/master/crates/tolk-fmt" target="_blank" rel="noopener noreferrer">Tolk formatter</a></li>
-                    <li>Added proof-of-concept <a href="https://github.com/ton-blockchain/tasm/tree/master/src/cli" target="_blank" rel="noopener noreferrer">Fift assembly compiler</a> on top of the TASM for new Tolk backend</li>
-                    <li>Added coverage and profiling for tests in <a href="https://github.com/ton-org/blueprint" target="_blank" rel="noopener noreferrer">Blueprint</a></li>
-                    <li>Led <a href="https://github.com/ton-blockchain/intellij-ton/releases/tag/v3.0.0" target="_blank" rel="noopener noreferrer">IntelliJ TON 3.0 release</a> with more than 170 tasks</li>
+                    <li>Created a <a href="https://github.com/ton-blockchain/acton/tree/master/crates" target="_blank" rel="noopener noreferrer">complete Tolk analysis pipeline</a> for the Tolk language</li>
                     <li>Led <a href="https://github.com/ton-blockchain/intellij-ton/releases/tag/v4.0.0" target="_blank" rel="noopener noreferrer">IntelliJ TON 4.0 release</a> with Acton support</li>
+                    <li>Led <a href="https://github.com/ton-blockchain/intellij-ton/releases/tag/v3.0.0" target="_blank" rel="noopener noreferrer">IntelliJ TON 3.0 release</a> with more than 170 tasks</li>
+                    <li>Created <a href="https://github.com/ton-blockchain/acton/tree/master/crates/tolk-fmt" target="_blank" rel="noopener noreferrer">Tolk formatter</a></li>
+                    <li>Added proof-of-concept <a href="https://github.com/ton-blockchain/tasm/tree/master/src/cli" target="_blank" rel="noopener noreferrer">Fift assembly compiler</a> on top of the TASM for the future Tolk backend</li>
                     <li>Created <a href="https://txtracer.ton.org/spec/" target="_blank" rel="noopener noreferrer">TVM Instructions catalog</a></li>
+                    <li>Added coverage and profiling for tests in <a href="https://github.com/ton-org/blueprint" target="_blank" rel="noopener noreferrer">Blueprint</a></li>
                 </ul>
             </article>
 
@@ -296,14 +341,13 @@
                     <span class="job-date">Jan 2025 – Jul 2025 · 7 mos</span>
                 </div>
                 <p><i>TON Studio | Yerevan, Armenia · Remote</i></p>
-                <p>Worked in the TON Studio division on the programming language Tact for the TON blockchain.<br><br>Support and development of Tact programming language compiler and tooling:</p>
+                <p>When I joined, Tact was still a prototype with limited tooling and significant reliability issues. Over <strong>six months</strong>, I built a language server and integrations for VS Code and JetBrains IDEs, created a formatter, fixed <strong>over 100 bugs</strong>, and implemented <strong>more than 40 features</strong>.<br><br>Support and development of Tact programming language compiler and tooling:</p>
                 <ul>
                     <li>Created <a href="https://github.com/tact-lang/tact-language-server/tree/master/server" target="_blank" rel="noopener noreferrer">language server</a> and <a href="https://github.com/tact-lang/tact-language-server/tree/master/client" target="_blank" rel="noopener noreferrer">VS Code extension</a></li>
                     <li>Created Fift assembly, BoC, TL-B language servers inside <a href="https://github.com/tact-lang/tact-language-server" target="_blank" rel="noopener noreferrer">Tact language server</a></li>
                     <li>Created <a href="https://github.com/tact-lang/intelli-tact" target="_blank" rel="noopener noreferrer">plugin for JetBrains IDEs</a></li>
                     <li>Created <a href="https://github.com/tact-lang/tact-language-server/tree/master/server/src/languages/tact/compiler/fmt/cst" target="_blank" rel="noopener noreferrer">CST parser generator</a> and <a href="https://github.com/tact-lang/tact-language-server/tree/master/server/src/languages/tact/compiler/fmt/formatter" target="_blank" rel="noopener noreferrer">formatter</a> for Tact</li>
                     <li>200+ commits in the <a href="https://github.com/tact-lang/tact" target="_blank" rel="noopener noreferrer">compiler repository</a></li>
-                    <li>Fixed 100+ bugs and added 40+ new features</li>
                 </ul>
                 <p>TON-related:</p>
                 <ul>

@@ -268,7 +268,7 @@
                 <h3>TON</h3>
                 <div class="job-header">
                     <b>Compiler Engineer</b>
-                    <span class="job-date">Jul 2025 – Present</span>
+                    <span class="job-date" id="current-job-date">Jul 2025 – Present</span>
                 </div>
                 <p><i>TON Core | Yerevan, Armenia · Remote</i></p>
                 <p>Working in the TON Core team on the programming language Tolk and development tooling for the TON blockchain.</p>
@@ -501,9 +501,7 @@
             }
         });
 
-        function formatWorkExperience(now = new Date()) {
-            const startYear = 2020;
-            const startMonth = 7;
+        function formatDuration(startYear, startMonth, now = new Date()) {
             const totalMonths = Math.max(0, (now.getFullYear() - startYear) * 12 + now.getMonth() + 1 - startMonth);
             const years = Math.floor(totalMonths / 12);
             const months = totalMonths % 12;
@@ -512,18 +510,20 @@
             if (years > 0) parts.push(`${years} ${years === 1 ? 'yr' : 'yrs'}`);
             if (months > 0) parts.push(`${months} ${months === 1 ? 'mo' : 'mos'}`);
 
-            return `${parts.join(' ') || '0 mos'} of experience`;
+            return parts.join(' ') || '0 mos';
         }
 
-        function updateWorkExperience() {
-            document.getElementById('work-experience').textContent = formatWorkExperience();
+        function updateDynamicDates() {
+            const now = new Date();
+            document.getElementById('work-experience').textContent = `${formatDuration(2020, 7, now)} of experience`;
+            document.getElementById('current-job-date').textContent = `Jul 2025 – Present · ${formatDuration(2025, 7, now)}`;
         }
 
-        updateWorkExperience();
-        setInterval(updateWorkExperience, 60 * 60 * 1000);
-        window.addEventListener('pageshow', updateWorkExperience);
+        updateDynamicDates();
+        setInterval(updateDynamicDates, 60 * 60 * 1000);
+        window.addEventListener('pageshow', updateDynamicDates);
         document.addEventListener('visibilitychange', () => {
-            if (!document.hidden) updateWorkExperience();
+            if (!document.hidden) updateDynamicDates();
         });
 
         const loc = document.getElementById('location');

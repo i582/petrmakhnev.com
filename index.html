@@ -163,6 +163,25 @@
 
         article { page-break-inside: avoid; break-inside: avoid; }
 
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin: 12px 0 0;
+            padding: 0;
+            list-style: none;
+        }
+        .tech-tags li {
+            margin: 0;
+            padding: 3px 9px 4px;
+            border-radius: 5px;
+            background: #e3edf4;
+            color: #526f99;
+            font-size: 1rem;
+            line-height: 1.25;
+            white-space: nowrap;
+        }
+
         .print-btn {
             position: fixed;
             top: 20px;
@@ -197,6 +216,7 @@
                 color: #1a1a1a; 
             }
             .job-date { color: #999; }
+            .tech-tags li { background: #243341; color: #adc4e3; }
             .contact-info { color: #bbb; }
             .print-btn { background: rgba(40, 40, 40, 0.9); border-color: #444; color: #ccc; }
             .print-btn:hover { background: #eee; color: #000; }
@@ -218,6 +238,12 @@
             h2 { font-size: 14pt; border-bottom: 0.5pt solid #000; }
             h3 { font-size: 13pt; }
             .job-date { color: #444 !important; }
+            .tech-tags li {
+                background: #e3edf4 !important;
+                color: #526f99 !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
         }
 
         @media (max-width: 600px) {
@@ -259,6 +285,7 @@
         body.terminal-mode .availability-banner a { padding: 8px 12px; margin: 0; background-image: none; }
         body.terminal-mode .availability-banner a:hover { background: #00ff41; border-color: #00ff41; }
         body.terminal-mode li::marker { color: #00ff41; }
+        body.terminal-mode .tech-tags li { background: #12301a; color: #00ff41; }
         body.terminal-mode hr { border: none; border-top: 1px solid #00ff41; opacity: 0.3; }
 
         #matrix-canvas {
@@ -304,6 +331,19 @@
         <section id="about">
             <h2>About</h2>
             <p itemprop="description">Software engineer building <strong>developer tools and infrastructure</strong>, with a background in compilers, static analysis, and IDE development. My work spans language implementations, cross-platform libraries, and complete development environments. Currently building the TON developer ecosystem at <strong>TON Core</strong>; previously worked on PhpStorm at <strong>JetBrains</strong> and compiler tooling at <strong>VK</strong>.</p>
+            <ul class="tech-tags" aria-label="Core technologies and skills">
+                <li>Rust</li>
+                <li>Compilers</li>
+                <li>Static analysis</li>
+                <li>LSP</li>
+                <li>IntelliJ SDK</li>
+                <li>TypeScript</li>
+                <li>React</li>
+                <li>Kotlin</li>
+                <li>C++</li>
+                <li>Go</li>
+                <li>TVM</li>
+            </ul>
         </section>
 
         <section id="experience">
@@ -324,14 +364,28 @@
                     <li>Created <a href="https://ton-blockchain.github.io/acton/docs/studio" target="_blank" rel="noopener noreferrer">Acton Studio</a> — a local web workspace for running tests, inspecting smart contracts, and managing TON development environments</li>
                     <li>Created <a href="https://actonscan.com/" target="_blank" rel="noopener noreferrer">actonscan</a> — a TON explorer for developers with source code debugging, message deserialization, emulation, a testnet faucet, and developer tools</li>
                     <li>Created a <a href="https://actonscan.com/faucet" target="_blank" rel="noopener noreferrer">testnet faucet</a> with proof-of-work challenges, abuse prevention, and persistent payout jobs</li>
+                    <li>Built <a href="https://github.com/ton-blockchain/acton/tree/master/crates" target="_blank" rel="noopener noreferrer">Acton’s Tolk analysis pipeline</a> and a <a href="https://github.com/ton-blockchain/acton/tree/master/crates/tolk-linter" target="_blank" rel="noopener noreferrer">Tolk static analyzer</a> with an extensive set of rules</li>
+                    <li>Created a <a href="https://github.com/ton-blockchain/acton/tree/master/crates/tolk-fmt" target="_blank" rel="noopener noreferrer">Tolk formatter</a> and integrated it into Acton, VS Code, and JetBrains IDEs</li>
                     <li>Created <a href="https://github.com/ton-blockchain/acton/tree/master/packages/vscode-ton" target="_blank" rel="noopener noreferrer">TON extension for VS Code</a> and <a href="https://github.com/ton-blockchain/acton/tree/master/crates/ton-language-server-core" target="_blank" rel="noopener noreferrer">language server</a> with support for Tolk, FunC, Fift assembly, TL-B, and the Acton toolchain</li>
-                    <li>Created a <a href="https://github.com/ton-blockchain/acton/tree/master/crates" target="_blank" rel="noopener noreferrer">complete Tolk analysis pipeline</a> in Acton</li>
                     <li>Led <a href="https://github.com/ton-blockchain/intellij-ton/releases/tag/v4.0.0" target="_blank" rel="noopener noreferrer">IntelliJ TON 4.0 release</a> with Acton support</li>
-                    <li>Led <a href="https://github.com/ton-blockchain/intellij-ton/releases/tag/v3.0.0" target="_blank" rel="noopener noreferrer">IntelliJ TON 3.0 release</a> with more than 170 tasks</li>
-                    <li>Created <a href="https://github.com/ton-blockchain/acton/tree/master/crates/tolk-fmt" target="_blank" rel="noopener noreferrer">Tolk formatter</a></li>
+                    <li>Reworked the <a href="https://github.com/ton-blockchain/intellij-ton/releases/tag/v3.0.0" target="_blank" rel="noopener noreferrer">IntelliJ TON plugin for the 3.0 release</a>, significantly improving support for TON languages and development tools</li>
                     <li>Added proof-of-concept <a href="https://github.com/ton-blockchain/tasm/tree/master/src/cli" target="_blank" rel="noopener noreferrer">Fift assembly compiler</a> on top of the TASM for the future Tolk backend</li>
                     <li>Created <a href="https://txtracer.ton.org/spec/" target="_blank" rel="noopener noreferrer">TVM Instructions catalog</a></li>
                     <li>Added coverage and profiling for tests in <a href="https://github.com/ton-org/blueprint" target="_blank" rel="noopener noreferrer">Blueprint</a></li>
+                </ul>
+                <ul class="tech-tags" aria-label="Technologies and skills">
+                    <li>Rust</li>
+                    <li>Static analysis</li>
+                    <li>LSP</li>
+                    <li>DAP</li>
+                    <li>Tolk</li>
+                    <li>TVM</li>
+                    <li>TypeScript</li>
+                    <li>Kotlin</li>
+                    <li>IntelliJ SDK</li>
+                    <li>UniFFI</li>
+                    <li>WebAssembly</li>
+                    <li>React</li>
                 </ul>
             </article>
 
@@ -341,7 +395,7 @@
                     <span class="job-date">Jan 2025 – Jul 2025 · 7 mos</span>
                 </div>
                 <p><i>TON Studio | Yerevan, Armenia · Remote</i></p>
-                <p>When I joined, Tact was still a prototype with limited tooling and significant reliability issues. Over <strong>six months</strong>, I built a language server and integrations for VS Code and JetBrains IDEs, created a formatter, fixed <strong>over 100 bugs</strong>, and implemented <strong>more than 40 features</strong>.<br><br>Support and development of Tact programming language compiler and tooling:</p>
+                <p>When I joined, Tact was still a prototype with limited tooling and significant reliability issues. Over <strong>six months</strong>, I fixed <strong>over 100 bugs</strong>, implemented <strong>more than 40 features</strong>, built a language server and integrations for VS Code and JetBrains IDEs, and created a formatter.</p>
                 <ul>
                     <li>Created <a href="https://github.com/tact-lang/tact-language-server/tree/master/server" target="_blank" rel="noopener noreferrer">language server</a> and <a href="https://github.com/tact-lang/tact-language-server/tree/master/client" target="_blank" rel="noopener noreferrer">VS Code extension</a></li>
                     <li>Created Fift assembly, BoC, TL-B language servers inside <a href="https://github.com/tact-lang/tact-language-server" target="_blank" rel="noopener noreferrer">Tact language server</a></li>
@@ -349,7 +403,7 @@
                     <li>Created <a href="https://github.com/tact-lang/tact-language-server/tree/master/server/src/languages/tact/compiler/fmt/cst" target="_blank" rel="noopener noreferrer">CST parser generator</a> and <a href="https://github.com/tact-lang/tact-language-server/tree/master/server/src/languages/tact/compiler/fmt/formatter" target="_blank" rel="noopener noreferrer">formatter</a> for Tact</li>
                     <li>200+ commits in the <a href="https://github.com/tact-lang/tact" target="_blank" rel="noopener noreferrer">compiler repository</a></li>
                 </ul>
-                <p>TON-related:</p>
+                <p>Alongside the Tact toolchain, I built TON debugging and analysis tools and contributed to the TVM documentation:</p>
                 <ul>
                     <li>Created a new version of the <a href="https://github.com/tact-lang/ton-opcode" target="_blank" rel="noopener noreferrer">TVM disassembler</a></li>
                     <li>Created <a href="https://github.com/ton-blockchain/tasm" target="_blank" rel="noopener noreferrer">TASM</a> — a complete assembler for TVM bitcode (900+ instructions, Text assembly -> Bitcode and vice versa)</li>
@@ -358,6 +412,21 @@
                     <li>Wrote several articles about TVM internals in TON documentation</li>
                 </ul>
                 <p>Moved to the TON Core team to develop tooling and infrastructure for the whole TON ecosystem.</p>
+                <ul class="tech-tags" aria-label="Technologies and skills">
+                    <li>TypeScript</li>
+                    <li>Compiler optimizations</li>
+                    <li>Code generation</li>
+                    <li>Parser generators</li>
+                    <li>Tact</li>
+                    <li>TVM</li>
+                    <li>LSP</li>
+                    <li>Tree-sitter</li>
+                    <li>Kotlin</li>
+                    <li>IntelliJ SDK</li>
+                    <li>Disassembly</li>
+                    <li>FunC</li>
+                    <li>React</li>
+                </ul>
             </article>
 
             <article>
@@ -374,6 +443,19 @@
                     <li>Authored a complete language specification</li>
                     <li>Wrote nearly 70,000 lines of code in the <a href="https://github.com/spawnlang/spawn/tree/main/y" target="_blank" rel="noopener noreferrer">Spawn standard library</a></li>
                     <li>Developed tools such as spawnfmt, spawnprof, and spawncov in Spawn itself</li>
+                </ul>
+                <ul class="tech-tags" aria-label="Technologies and skills">
+                    <li>Compilers</li>
+                    <li>Language design</li>
+                    <li>Type systems</li>
+                    <li>Code generation</li>
+                    <li>Dataflow analysis</li>
+                    <li>Escape analysis</li>
+                    <li>Generics</li>
+                    <li>C</li>
+                    <li>Tree-sitter</li>
+                    <li>LSP</li>
+                    <li>IntelliJ SDK</li>
                 </ul>
             </article>
 
@@ -395,6 +477,16 @@
                     <li>Improved testing support</li>
                     <li>Closed about 100 tasks</li>
                 </ul>
+                <ul class="tech-tags" aria-label="Technologies and skills">
+                    <li>Java</li>
+                    <li>Kotlin</li>
+                    <li>Type inference</li>
+                    <li>Static analysis</li>
+                    <li>Generics</li>
+                    <li>Code inspections</li>
+                    <li>IntelliJ SDK</li>
+                    <li>PHP</li>
+                </ul>
             </article>
 
             <article>
@@ -411,6 +503,12 @@
                     <li>Various configurations for launching KPHP, PHPUnit and PHPLinter</li>
                     <li>Built-in KPHP Playground and Hastebin</li>
                     <li>Ability to view the generated C++ code for the entire site</li>
+                </ul>
+                <ul class="tech-tags" aria-label="Technologies and skills">
+                    <li>Kotlin</li>
+                    <li>IntelliJ SDK</li>
+                    <li>KPHP</li>
+                    <li>PHP</li>
                 </ul>
             </article>
 
@@ -441,6 +539,17 @@
                     <li>Collect dependencies between classes and functions and check reachability</li>
                     <li>Collect general statistics on the project and view info in sortable tables</li>
                 </ul>
+                <ul class="tech-tags" aria-label="Technologies and skills">
+                    <li>C++</li>
+                    <li>Go</li>
+                    <li>Compiler optimizations</li>
+                    <li>Type inference</li>
+                    <li>Static analysis</li>
+                    <li>Call graphs</li>
+                    <li>Parsing</li>
+                    <li>KPHP</li>
+                    <li>PHP</li>
+                </ul>
             </article>
 
             <article>
@@ -453,6 +562,14 @@
                     <li>Development of static analyzer <a href="https://github.com/VKCOM/noverify" target="_blank" rel="noopener noreferrer">NoVerify</a> for PHP and internal VK linter</li>
                     <li>Adding new checks and code refactoring</li>
                     <li>Writing unit tests</li>
+                </ul>
+                <ul class="tech-tags" aria-label="Technologies and skills">
+                    <li>Go</li>
+                    <li>Static analysis</li>
+                    <li>Type inference</li>
+                    <li>Parsing</li>
+                    <li>Constant folding</li>
+                    <li>PHP</li>
                 </ul>
             </article>
         </section>

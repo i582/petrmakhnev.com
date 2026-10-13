@@ -352,7 +352,7 @@
                 <a href="https://github.com/i582" target="_blank" rel="noopener noreferrer me" title="Visit Petr Makhnev's GitHub profile">GitHub</a>
             </div>
             <div class="contact-meta">
-                <span id="location" style="cursor: pointer;" title="Show coordinates">Yerevan, Armenia</span>
+                <span><span id="location" style="cursor: pointer;" title="Show coordinates">Based in Armenia</span> · Open to remote opportunities</span>
                 <span id="work-experience" title="Career started in July 2020">Experience since July 2020</span>
             </div>
         </div>
@@ -403,10 +403,21 @@
                     <span class="project-context">Programming language · Independent project</span>
                 </div>
                 <p>Spawn is a programming language with a compiler targeting C, an interpreter, and a complete set of development tools. It includes <strong>250 inspections</strong>, nearly <strong>70,000 lines</strong> of standard library code, language servers, and IDE integrations.</p>
-                <p>I led a small team of programming language enthusiasts who developed Spawn as a research project.</p>
+                <p>Led a small team developing Spawn as an independent programming language research project.</p>
                 <div class="project-links">
                     <a href="https://github.com/spawnlang/spawn/tree/main/cmd/spawnc" target="_blank" rel="noopener noreferrer">Compiler</a>
                     <a href="https://github.com/spawnlang/spawn/tree/main/y" target="_blank" rel="noopener noreferrer">Standard library</a>
+                </div>
+            </article>
+            <article class="selected-project">
+                <div class="project-heading">
+                    <h3><a href="https://github.com/i582/wallet-engine" target="_blank" rel="noopener noreferrer">Wallet Engine</a></h3>
+                    <span class="project-context">Wallet infrastructure · TON Core</span>
+                </div>
+                <p>Wallet Engine is a shared Rust core for TON wallet applications, with bindings for Swift, Kotlin, C++, and TypeScript/WebAssembly. It handles wallet creation and import, transfers, transaction history, and TON Connect.</p>
+                <p>It powers <a href="https://t.me/durov/533" target="_blank" rel="noopener noreferrer">Telegram’s native wallet</a> in the iOS and Desktop apps.</p>
+                <div class="project-links">
+                    <a href="https://github.com/i582/wallet-engine" target="_blank" rel="noopener noreferrer">Source code</a>
                 </div>
             </article>
         </section>
@@ -428,7 +439,7 @@
                     <li>Enabled real TON networks to run locally with <a href="https://github.com/ton-blockchain/acton/tree/master/apps/localton" target="_blank" rel="noopener noreferrer">Localton</a>, including validators, a liteserver, TON Center v2/v3 APIs, and indexers</li>
                     <li>Connected the toolchain to editors through the <a href="https://github.com/ton-blockchain/acton/tree/master/packages/vscode-ton" target="_blank" rel="noopener noreferrer">TON extension for VS Code</a> and <a href="https://github.com/ton-blockchain/acton/tree/master/crates/ton-language-server-core" target="_blank" rel="noopener noreferrer">language server</a>, and led the <a href="https://github.com/ton-blockchain/intellij-ton/releases/tag/v4.0.0" target="_blank" rel="noopener noreferrer">IntelliJ TON 4.0 release</a> with Acton support</li>
                     <li>Developed <a href="https://actonscan.com/" target="_blank" rel="noopener noreferrer">actonscan</a> to inspect and debug deployed contracts and transactions, with source code debugging, message deserialization, emulation, and a testnet faucet</li>
-                    <li>Built <a href="https://github.com/i582/wallet-engine" target="_blank" rel="noopener noreferrer">Wallet Engine</a>, a shared Rust core powering Telegram’s native wallet in the iOS and Desktop apps, with bindings for Swift, Kotlin, C++, and TypeScript/WebAssembly</li>
+                    <li>Built <a href="https://github.com/i582/wallet-engine" target="_blank" rel="noopener noreferrer">Wallet Engine</a>, a shared Rust core powering <a href="https://t.me/durov/533" target="_blank" rel="noopener noreferrer">Telegram’s native wallet</a> in the iOS and Desktop apps, with bindings for Swift, Kotlin, C++, and TypeScript/WebAssembly</li>
                 </ul>
                 <details class="experience-details">
                     <summary>More tooling and infrastructure work</summary>
@@ -759,9 +770,9 @@
 
         const loc = document.getElementById('location');
         loc.addEventListener('click', () => {
-            if (loc.innerText === "Yerevan, Armenia") {
+            if (loc.innerText === "Based in Armenia") {
                 loc.innerText = "40.1772° N, 44.5035° E";
-                setTimeout(() => { loc.innerText = "Yerevan, Armenia"; }, 3000);
+                setTimeout(() => { loc.innerText = "Based in Armenia"; }, 3000);
             }
         });
     </script>

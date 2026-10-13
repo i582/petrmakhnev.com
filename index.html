@@ -174,6 +174,7 @@
         .project-heading h3 { margin: 0; }
         .project-context { color: #666; font-size: 1rem; font-style: italic; }
         .selected-project p { margin: 8px 0; line-height: 1.3; }
+        .selected-project p strong { font-weight: 550; }
         .project-links { display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: 1rem; }
         .experience-details { margin-top: 14px; }
         .experience-details summary { width: fit-content; cursor: pointer; color: #555; font-size: 1rem; }
@@ -389,8 +390,9 @@
                     <h3><a href="https://ton-blockchain.github.io/acton/" target="_blank" rel="noopener noreferrer">Acton</a></h3>
                     <span class="project-context">Toolchain &amp; development environment · TON Core</span>
                 </div>
-                <p>Acton is a comprehensive toolchain for the TON blockchain. It covers the full development workflow — from tests and scripts to running a private local network with a web UI. It includes a language server, static analyzer, formatter, debugger, and testing framework, alongside Acton Studio and Localton.</p>
-                <p>Developers can build, test, debug, and deploy projects with Acton directly from VS Code and JetBrains IDEs.</p>
+                <p><strong>Led the design and development</strong> of Acton, a <strong>unified toolchain</strong> for TON smart contract development. It includes a language server, static analyzer, formatter, and debugger, alongside Acton Studio and Localton for running a private local network with a web UI.</p>
+                <p>Developers can build, test, debug, and deploy projects with Acton directly from <strong>VS Code and JetBrains IDEs</strong>.</p>
+                <p>Acton makes testing much simpler by letting developers write tests in the <strong>same language as their smart contracts</strong>, <strong>scripts simplify deployment</strong>, and <strong>local blockchain environments</strong> make dApp development easier.</p>
                 <div class="project-links">
                     <a href="https://github.com/ton-blockchain/acton" target="_blank" rel="noopener noreferrer">Source code</a>
                     <a href="https://ton-blockchain.github.io/acton/docs/studio" target="_blank" rel="noopener noreferrer">Acton Studio</a>
@@ -402,8 +404,8 @@
                     <h3><a href="https://github.com/spawnlang/spawn" target="_blank" rel="noopener noreferrer">Spawn</a></h3>
                     <span class="project-context">Programming language · Independent project</span>
                 </div>
-                <p>Spawn is a programming language with a compiler targeting C, an interpreter, and a complete set of development tools. It includes <strong>250 inspections</strong>, nearly <strong>70,000 lines</strong> of standard library code, language servers, and IDE integrations.</p>
-                <p>Led a small team developing Spawn as an independent programming language research project.</p>
+                <p><strong>Designed a programming language</strong> and built its compiler targeting C, interpreter, and development tools. Implemented <strong>250 inspections</strong>, wrote nearly <strong>70,000 lines</strong> of standard library code, and developed language servers and IDE integrations.</p>
+                <p><strong>Led a small team</strong> developing Spawn as an independent programming language research project.</p>
                 <div class="project-links">
                     <a href="https://github.com/spawnlang/spawn/tree/main/cmd/spawnc" target="_blank" rel="noopener noreferrer">Compiler</a>
                     <a href="https://github.com/spawnlang/spawn/tree/main/y" target="_blank" rel="noopener noreferrer">Standard library</a>
@@ -414,10 +416,13 @@
                     <h3><a href="https://github.com/i582/wallet-engine" target="_blank" rel="noopener noreferrer">Wallet Engine</a></h3>
                     <span class="project-context">Wallet infrastructure · TON Core</span>
                 </div>
-                <p>Wallet Engine is a shared Rust core for TON wallet applications, with bindings for Swift, Kotlin, C++, and TypeScript/WebAssembly. It handles wallet creation and import, transfers, transaction history, and TON Connect.</p>
-                <p>It powers <a href="https://t.me/durov/533" target="_blank" rel="noopener noreferrer">Telegram’s native wallet</a> in the iOS and Desktop apps.</p>
+                <p>Built a <strong>shared Rust core</strong> for TON wallet applications, with bindings for Swift, Kotlin, C++, and TypeScript/WebAssembly. It handles wallet creation and import, transfers, transaction history, and TON Connect.</p>
+                <p>A <strong>single shared implementation</strong> keeps all wallet backend logic and its edge cases in one place, ensuring consistent behavior across platforms.</p>
+                <p>Wallet Engine powers <strong><a href="https://t.me/durov/533" target="_blank" rel="noopener noreferrer">Telegram’s native wallet</a></strong> in the iOS, Android, and Desktop apps.</p>
                 <div class="project-links">
                     <a href="https://github.com/i582/wallet-engine" target="_blank" rel="noopener noreferrer">Source code</a>
+                    <a href="https://github.com/telegramdesktop/tdesktop/blob/63a1831728147e941ad2dc8939879cf5afe419c7/Telegram/SourceFiles/wallet/wallet_engine.cpp#L1280-L1299" target="_blank" rel="noopener noreferrer">Telegram Desktop integration</a>
+                    <a href="https://github.com/TelegramMessenger/Telegram-iOS/blob/f1dd7a2dbd02cbbf513e75d5695d8d36d1cf5838/submodules/WalletContext/Sources/WalletEngineRuntime.swift#L128-L148" target="_blank" rel="noopener noreferrer">Telegram iOS integration</a>
                 </div>
             </article>
         </section>
@@ -439,7 +444,7 @@
                     <li>Enabled real TON networks to run locally with <a href="https://github.com/ton-blockchain/acton/tree/master/apps/localton" target="_blank" rel="noopener noreferrer">Localton</a>, including validators, a liteserver, TON Center v2/v3 APIs, and indexers</li>
                     <li>Connected the toolchain to editors through the <a href="https://github.com/ton-blockchain/acton/tree/master/packages/vscode-ton" target="_blank" rel="noopener noreferrer">TON extension for VS Code</a> and <a href="https://github.com/ton-blockchain/acton/tree/master/crates/ton-language-server-core" target="_blank" rel="noopener noreferrer">language server</a>, and led the <a href="https://github.com/ton-blockchain/intellij-ton/releases/tag/v4.0.0" target="_blank" rel="noopener noreferrer">IntelliJ TON 4.0 release</a> with Acton support</li>
                     <li>Developed <a href="https://actonscan.com/" target="_blank" rel="noopener noreferrer">actonscan</a> to inspect and debug deployed contracts and transactions, with source code debugging, message deserialization, emulation, and a testnet faucet</li>
-                    <li>Built <a href="https://github.com/i582/wallet-engine" target="_blank" rel="noopener noreferrer">Wallet Engine</a>, a shared Rust core powering <a href="https://t.me/durov/533" target="_blank" rel="noopener noreferrer">Telegram’s native wallet</a> in the iOS and Desktop apps, with bindings for Swift, Kotlin, C++, and TypeScript/WebAssembly</li>
+                    <li>Built <a href="https://github.com/i582/wallet-engine" target="_blank" rel="noopener noreferrer">Wallet Engine</a>, a shared Rust core powering <a href="https://t.me/durov/533" target="_blank" rel="noopener noreferrer">Telegram’s native wallet</a> in the iOS, Android, and Desktop apps, with bindings for Swift, Kotlin, C++, and TypeScript/WebAssembly</li>
                 </ul>
                 <details class="experience-details">
                     <summary>More tooling and infrastructure work</summary>
